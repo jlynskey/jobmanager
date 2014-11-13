@@ -1,0 +1,27 @@
+<h1>Listing jobdashboards</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Job</th>
+      <th>Job comment</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @jobdashboards.each do |jobdashboard| %>
+      <tr>
+        <td><%= jobdashboard.job_id %></td>
+        <td><%= jobdashboard.job_comment %></td>
+        <td><%= link_to 'Show', jobdashboard %></td>
+        <td><%= link_to 'Edit', edit_jobdashboard_path(jobdashboard) %></td>
+        <td><%= link_to 'Destroy', jobdashboard, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Jobdashboard', new_jobdashboard_path %>

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Job:</strong>
+  <%= @jobdashboard.job_id %>
+</p>
+
+<p>
+  <strong>Job comment:</strong>
+  <%= @jobdashboard.job_comment %>
+</p>
+
+<%= link_to 'Edit', edit_jobdashboard_path(@jobdashboard) %> |
+<%= link_to 'Back', jobdashboards_path %>
